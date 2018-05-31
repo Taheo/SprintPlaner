@@ -8,24 +8,27 @@ namespace SprintPlaner.BLL
 {
     public class MemorySprintService : ISprintService
     {
+        private static readonly List<Sprint> Sprints = new List<Sprint>();
         public void Create(Sprint sprint)
         {
-            throw new NotImplementedException();
+            Sprints.Add(sprint);
         }
 
         public void Delete(Guid id)
         {
-            throw new NotImplementedException();
+            var sprintToDelete = Sprints.SingleOrDefault(s => s.ID == id);
+            Sprints.Remove(sprintToDelete);
         }
 
         public IEnumerable<Sprint> GetAll()
         {
-            throw new NotImplementedException();
+            return Sprints;
         }
 
         public Sprint GetSprintByID(Guid id)
         {
-            throw new NotImplementedException();
+            var sprintToFind = Sprints.SingleOrDefault(s => s.ID == id);
+            return sprintToFind;
         }
     }
 }
