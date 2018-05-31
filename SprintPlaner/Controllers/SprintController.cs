@@ -1,5 +1,4 @@
 ﻿using SprintPlaner.BLL;
-using SprintPlaner.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,35 +7,34 @@ using System.Web.Mvc;
 
 namespace SprintPlaner.Controllers
 {
-    public class UserController : Controller
+    public class SprintController : Controller
     {
-        private IUserService service = new MemoryUserService();
-
-        // GET: User
+        private ISprintService service = new MemorySprintService();
+        // GET: Sprint
         public ActionResult Index()
         {
-            return View(service.GetAll());
+            return View();
         }
 
-        // GET: User/Details/5
+        // GET: Sprint/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: User/Create
+        // GET: Sprint/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: User/Create
+        // POST: Sprint/Create
         [HttpPost]
-        public ActionResult Create(User newuser)
+        public ActionResult Create(FormCollection collection)
         {
             try
             {
-                service.Create(newuser);
+                // TODO: Add insert logic here
 
                 return RedirectToAction("Index");
             }
@@ -46,13 +44,13 @@ namespace SprintPlaner.Controllers
             }
         }
 
-        // GET: User/Edit/5
+        // GET: Sprint/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: User/Edit/5
+        // POST: Sprint/Edit/5
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
         {
@@ -68,13 +66,13 @@ namespace SprintPlaner.Controllers
             }
         }
 
-        // GET: User/Delete/5
+        // GET: Sprint/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: User/Delete/5
+        // POST: Sprint/Delete/5
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
         {

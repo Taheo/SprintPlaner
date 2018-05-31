@@ -6,7 +6,7 @@ using System.Web;
 
 namespace SprintPlaner.BLL
 {
-    public class MemoryDataService : IDataService
+    public class MemoryUserService : IUserService
     {
         private static readonly List<User> Users = new List<User>();
 

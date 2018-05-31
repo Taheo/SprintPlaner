@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace SprintPlaner.BLL
 {
-    interface IDataService
+    interface ISprintService
     {
-        IEnumerable<User> GetAll();
-        User GetByID(Guid id);
-        void Create(User user);
+        IEnumerable<Sprint> GetAll();
+        Sprint GetSprintByID(Guid id);
+        void Create(Sprint sprint);
         void Delete(Guid id);
     }
 }

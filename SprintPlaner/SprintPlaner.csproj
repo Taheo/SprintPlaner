@@ -142,9 +142,12 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="BLL\IDataService.cs" />
-    <Compile Include="BLL\MemoryDataService.cs" />
+    <Compile Include="BLL\IUserService.cs" />
+    <Compile Include="BLL\ISprintService.cs" />
+    <Compile Include="BLL\MemorySprintService.cs" />
+    <Compile Include="BLL\MemoryUserService.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SprintController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -196,6 +199,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Sprint\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
