@@ -148,6 +148,10 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="BLL\EFSprintService.cs" />
+    <Compile Include="BLL\EFTaskService.cs" />
+    <Compile Include="BLL\EFUserService.cs" />
+    <Compile Include="BLL\ITaskService.cs" />
     <Compile Include="BLL\IUserService.cs" />
     <Compile Include="BLL\ISprintService.cs" />
     <Compile Include="BLL\MemorySprintService.cs" />
@@ -155,6 +159,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SprintController.cs" />
     <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="DataBase\DataContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -164,6 +169,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\SprintPlanerDB.mdf" />
+    <Content Include="App_Data\SprintPlanerDB_log.ldf">
+      <DependentUpon>SprintPlanerDB.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -204,7 +213,6 @@
     <Content Include="Views\User\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Views\Sprint\" />
   </ItemGroup>
   <ItemGroup>

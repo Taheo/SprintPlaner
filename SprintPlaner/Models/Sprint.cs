@@ -8,7 +8,7 @@ namespace SprintPlaner.Models
     public class Sprint
     {
         public Guid Id { get; set; }
-        public List<Task> TaskList { get; set; }
+        public List<Quest> TaskList { get; set; }
         public DateTime Deadline { get; set; }
 
         public Sprint()

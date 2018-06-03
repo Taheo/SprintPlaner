@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using SprintPlaner.DataBase;
 using SprintPlaner.Models;
 
 namespace SprintPlaner.BLL
@@ -10,22 +11,37 @@ namespace SprintPlaner.BLL
     {
         public void Create(Sprint sprint)
         {
-            throw new NotImplementedException();
+            using (DataContext db = new DataContext())
+            {
+                db.ListOfSprints.Add(sprint);
+                db.SaveChanges();
+            }
         }
 
         public void Delete(Guid id)
         {
-            throw new NotImplementedException();
+            using (DataContext db = new DataContext())
+            {
+                var sprintToDelete = db.ListOfSprints.Where(x => x.Id == id).FirstOrDefault();
+                db.ListOfSprints.Remove(sprintToDelete);
+                db.SaveChanges();
+            }
         }
 
         public IEnumerable<Sprint> GetAll()
         {
-            throw new NotImplementedException();
+            using (DataContext db = new DataContext())
+            {
+                return db.ListOfSprints;
+            }
         }
-
+        
         public Sprint GetSprintByID(Guid id)
         {
-            throw new NotImplementedException();
+            using (DataContext db = new DataContext())
+            {
+                return db.ListOfSprints.SingleOrDefault(x => x.Id == id);
+            }
         }
     }
 }

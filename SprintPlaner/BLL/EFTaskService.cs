@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SprintPlaner.DataBase;
+using SprintPlaner.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -6,26 +8,41 @@ using System.Web;
 
 namespace SprintPlaner.BLL
 {
-    public class EFTaskService : ITaskService
+    public class EFTaskService : IQuestService
     {
-        public void Create(Task sprint)
+        public void Create(Quest quest)
         {
-            throw new NotImplementedException();
+            using (DataContext db = new DataContext())
+            {
+                db.ListOfQuests.Add(quest);
+                db.SaveChanges();
+            }
         }
 
         public void Delete(Guid id)
         {
-            throw new NotImplementedException();
+            using (DataContext db = new DataContext())
+            {
+                var questToDelete = db.ListOfQuests.Where(x => x.Id == id).FirstOrDefault();
+                db.ListOfQuests.Remove(questToDelete);
+                db.SaveChanges();
+            }
         }
 
-        public IEnumerable<Task> GetAll()
+        public IEnumerable<Quest> GetAll()
         {
-            throw new NotImplementedException();
+            using (DataContext db = new DataContext())
+            {
+                return db.ListOfQuests;
+            }
         }
 
-        public Task GetSprintByID(Guid id)
+        public Quest GetSprintByID(Guid id)
         {
-            throw new NotImplementedException();
+            using (DataContext db = new DataContext())
+            {
+                return db.ListOfQuests.SingleOrDefault(x => x.Id == id);
+            }
         }
     }
 }

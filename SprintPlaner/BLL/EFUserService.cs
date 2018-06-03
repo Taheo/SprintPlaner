@@ -14,22 +14,34 @@ namespace SprintPlaner.BLL
             using (DataContext db = new DataContext())
             {
                 db.ListOfUsers.Add(user);
+                db.SaveChanges();
             }
         }
 
         public void Delete(Guid id)
         {
-            throw new NotImplementedException();
+            using (DataContext db = new DataContext())
+            {
+                var userToDelete = db.ListOfUsers.Where(x => x.Id == id).FirstOrDefault();
+                db.ListOfUsers.Remove(userToDelete);
+                db.SaveChanges();
+            }
         }
 
         public IEnumerable<User> GetAll()
         {
-            throw new NotImplementedException();
+            using (DataContext db = new DataContext())
+            {
+                return db.ListOfUsers;
+            }
         }
 
         public User GetByID(Guid id)
         {
-            throw new NotImplementedException();
+            using (DataContext db = new DataContext())
+            {
+                return db.ListOfUsers.SingleOrDefault(x => x.Id == id);
+            }
         }
     }
 }

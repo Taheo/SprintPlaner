@@ -15,6 +15,6 @@ namespace SprintPlaner.DataBase
 
         public DbSet<Models.User> ListOfUsers { get; set; }
         public DbSet<Models.Sprint> ListOfSprints { get; set; }
-        public DbSet<Models.Task> ListOfTasks { get; set; }
+        public DbSet<Models.Quest> ListOfQuests { get; set; }
     }
 }
