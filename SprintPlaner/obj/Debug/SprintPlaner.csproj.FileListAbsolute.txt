@@ -180,3 +180,7 @@ E:\programowanie\ASPUczelnia\SprintPlaner\SprintPlaner\obj\Debug\SprintPlaner.cs
 E:\programowanie\ASPUczelnia\SprintPlaner\SprintPlaner\obj\Debug\SprintPlaner.csproj.CopyComplete
 E:\programowanie\ASPUczelnia\SprintPlaner\SprintPlaner\obj\Debug\SprintPlaner.dll
 E:\programowanie\ASPUczelnia\SprintPlaner\SprintPlaner\obj\Debug\SprintPlaner.pdb
+E:\programowanie\ASPUczelnia\SprintPlaner\SprintPlaner\bin\EntityFramework.dll
+E:\programowanie\ASPUczelnia\SprintPlaner\SprintPlaner\bin\EntityFramework.SqlServer.dll
+E:\programowanie\ASPUczelnia\SprintPlaner\SprintPlaner\bin\EntityFramework.xml
+E:\programowanie\ASPUczelnia\SprintPlaner\SprintPlaner\bin\EntityFramework.SqlServer.xml
