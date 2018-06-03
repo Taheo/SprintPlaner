@@ -10,7 +10,7 @@ namespace SprintPlaner.Controllers
 {
     public class UserController : Controller
     {
-        private IUserService service = new MemoryUserService();
+        private IUserService service = new EFUserService();
 
         // GET: User
         public ActionResult Index()

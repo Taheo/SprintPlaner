@@ -11,7 +11,7 @@ namespace SprintPlaner.BLL
     {
         public void Create(User user)
         {
-            using (DataContext db = new DataContext())
+            using (var db = new DataContext())
             {
                 db.ListOfUsers.Add(user);
                 db.SaveChanges();
@@ -20,7 +20,7 @@ namespace SprintPlaner.BLL
 
         public void Delete(Guid id)
         {
-            using (DataContext db = new DataContext())
+            using (var db = new DataContext())
             {
                 var userToDelete = db.ListOfUsers.Where(x => x.Id == id).FirstOrDefault();
                 db.ListOfUsers.Remove(userToDelete);
@@ -30,15 +30,15 @@ namespace SprintPlaner.BLL
 
         public IEnumerable<User> GetAll()
         {
-            using (DataContext db = new DataContext())
+            using (var db = new DataContext())
             {
-                return db.ListOfUsers;
+                return db.ListOfUsers.ToList();
             }
         }
 
         public User GetByID(Guid id)
         {
-            using (DataContext db = new DataContext())
+            using (var db = new DataContext())
             {
                 return db.ListOfUsers.SingleOrDefault(x => x.Id == id);
             }

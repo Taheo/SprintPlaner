@@ -16,7 +16,7 @@ namespace SprintPlaner.BLL
 
         public void Delete(Guid id)
         {
-            Sprints.Remove(Sprints.FirstOrDefault(s => s.ID == id));
+            Sprints.Remove(Sprints.FirstOrDefault(s => s.Id == id));
         }
 
         public IEnumerable<Sprint> GetAll()
@@ -26,7 +26,7 @@ namespace SprintPlaner.BLL
 
         public Sprint GetSprintByID(Guid id)
         {
-            var sprintToFind = Sprints.FirstOrDefault(s => s.ID == id);
+            var sprintToFind = Sprints.FirstOrDefault(s => s.Id == id);
             return sprintToFind;
         }
     }

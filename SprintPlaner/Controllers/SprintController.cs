@@ -9,7 +9,7 @@ namespace SprintPlaner.Controllers
 {
     public class SprintController : Controller
     {
-        private ISprintService service = new MemorySprintService();
+        private ISprintService service = new EFSprintService();
         // GET: Sprint
         public ActionResult Index()
         {

@@ -184,3 +184,5 @@ E:\programowanie\ASPUczelnia\SprintPlaner\SprintPlaner\bin\EntityFramework.dll
 E:\programowanie\ASPUczelnia\SprintPlaner\SprintPlaner\bin\EntityFramework.SqlServer.dll
 E:\programowanie\ASPUczelnia\SprintPlaner\SprintPlaner\bin\EntityFramework.xml
 E:\programowanie\ASPUczelnia\SprintPlaner\SprintPlaner\bin\EntityFramework.SqlServer.xml
+E:\programowanie\ASPUczelnia\SprintPlaner\SprintPlaner\obj\Debug\SprintPlaner.Migrations.InitialCreate.resources
+E:\programowanie\ASPUczelnia\SprintPlaner\SprintPlaner\obj\Debug\SprintPlaner.csproj.GenerateResource.cache

@@ -17,12 +17,12 @@ namespace SprintPlaner.BLL
 
         public void Delete(Guid id)
         {
-            Users.Remove(Users.FirstOrDefault(x => x.ID == id));
+            Users.Remove(Users.FirstOrDefault(x => x.Id == id));
         }
 
         public void Edit(Guid id, User user)
         {
-            Users.Remove(Users.FirstOrDefault(x => x.ID == id));
+            Users.Remove(Users.FirstOrDefault(x => x.Id == id));
             Users.Add(user);
         }
 
@@ -33,7 +33,7 @@ namespace SprintPlaner.BLL
 
         public User GetByID(Guid id)
         {
-            return Users.FirstOrDefault(x => x.ID == id);
+            return Users.FirstOrDefault(x => x.Id == id);
         }
 
         public User GetUserByMail(string email)

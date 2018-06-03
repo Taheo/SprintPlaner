@@ -12,7 +12,7 @@ namespace SprintPlaner.BLL
     {
         public void Create(Quest quest)
         {
-            using (DataContext db = new DataContext())
+            using (var db = new DataContext())
             {
                 db.ListOfQuests.Add(quest);
                 db.SaveChanges();
@@ -21,7 +21,7 @@ namespace SprintPlaner.BLL
 
         public void Delete(Guid id)
         {
-            using (DataContext db = new DataContext())
+            using (var db = new DataContext())
             {
                 var questToDelete = db.ListOfQuests.Where(x => x.Id == id).FirstOrDefault();
                 db.ListOfQuests.Remove(questToDelete);
@@ -31,7 +31,7 @@ namespace SprintPlaner.BLL
 
         public IEnumerable<Quest> GetAll()
         {
-            using (DataContext db = new DataContext())
+            using (var db = new DataContext())
             {
                 return db.ListOfQuests;
             }
@@ -39,7 +39,7 @@ namespace SprintPlaner.BLL
 
         public Quest GetSprintByID(Guid id)
         {
-            using (DataContext db = new DataContext())
+            using (var db = new DataContext())
             {
                 return db.ListOfQuests.SingleOrDefault(x => x.Id == id);
             }

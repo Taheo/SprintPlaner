@@ -151,7 +151,7 @@
     <Compile Include="BLL\EFSprintService.cs" />
     <Compile Include="BLL\EFTaskService.cs" />
     <Compile Include="BLL\EFUserService.cs" />
-    <Compile Include="BLL\ITaskService.cs" />
+    <Compile Include="BLL\IQuestService.cs" />
     <Compile Include="BLL\IUserService.cs" />
     <Compile Include="BLL\ISprintService.cs" />
     <Compile Include="BLL\MemorySprintService.cs" />
@@ -163,8 +163,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806031718145_InitialCreate.cs" />
+    <Compile Include="Migrations\201806031718145_InitialCreate.Designer.cs">
+      <DependentUpon>201806031718145_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Sprint.cs" />
-    <Compile Include="Models\Task.cs" />
+    <Compile Include="Models\Quest.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -227,6 +232,11 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201806031718145_InitialCreate.resx">
+      <DependentUpon>201806031718145_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

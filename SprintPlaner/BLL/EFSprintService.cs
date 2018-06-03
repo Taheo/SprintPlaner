@@ -11,7 +11,7 @@ namespace SprintPlaner.BLL
     {
         public void Create(Sprint sprint)
         {
-            using (DataContext db = new DataContext())
+            using (var db = new DataContext())
             {
                 db.ListOfSprints.Add(sprint);
                 db.SaveChanges();
@@ -20,7 +20,7 @@ namespace SprintPlaner.BLL
 
         public void Delete(Guid id)
         {
-            using (DataContext db = new DataContext())
+            using (var db = new DataContext())
             {
                 var sprintToDelete = db.ListOfSprints.Where(x => x.Id == id).FirstOrDefault();
                 db.ListOfSprints.Remove(sprintToDelete);
@@ -30,7 +30,7 @@ namespace SprintPlaner.BLL
 
         public IEnumerable<Sprint> GetAll()
         {
-            using (DataContext db = new DataContext())
+            using (var db = new DataContext())
             {
                 return db.ListOfSprints;
             }
@@ -38,7 +38,7 @@ namespace SprintPlaner.BLL
         
         public Sprint GetSprintByID(Guid id)
         {
-            using (DataContext db = new DataContext())
+            using (var db = new DataContext())
             {
                 return db.ListOfSprints.SingleOrDefault(x => x.Id == id);
             }
