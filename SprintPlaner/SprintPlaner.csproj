@@ -173,6 +173,8 @@
     <Compile Include="Models\Quest.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VM\CreateQuestVM.cs" />
+    <Compile Include="VM\QuestToEditVM.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\SprintPlanerDB.mdf" />
@@ -223,6 +225,7 @@
     <Content Include="Views\User\ProductOwnerView.cshtml" />
     <Content Include="Views\User\ScrumMasterView.cshtml" />
     <Content Include="Views\Quest\Create.cshtml" />
+    <Content Include="Views\Quest\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Sprint\" />

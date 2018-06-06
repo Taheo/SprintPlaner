@@ -1,5 +1,6 @@
 ﻿using SprintPlaner.DataBase;
 using SprintPlaner.Models;
+using SprintPlaner.VM;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,6 +30,17 @@ namespace SprintPlaner.BLL
             }
         }
 
+        public void Edit(Guid id, Quest quest)
+        {
+            using (var db = new DataContext())
+            {
+                //Todo entity framework update element
+                db.ListOfQuests.Remove(db.ListOfQuests.FirstOrDefault(x => x.Id == id));
+                db.ListOfQuests.Add(quest);
+                db.SaveChanges();
+            }
+        }
+
         public IEnumerable<Quest> GetAll()
         {
             using (var db = new DataContext())
@@ -37,7 +49,7 @@ namespace SprintPlaner.BLL
             }
         }
 
-        public Quest GetSprintByID(Guid id)
+        public Quest GetQuestByID(Guid id)
         {
             using (var db = new DataContext())
             {

@@ -4,5 +4,21 @@
 }
 
 <h2>ProductOwnerView</h2>
+<section>
+    
+    @Html.ActionLink("Dodaj zadanie", "Create", "Quest")
+    @foreach (var item in Model)
+    {
+        <div>
+            <p>@item.Title</p>
+            <p>@item.Description</p>
+            @if (item.StoryValue != null && item.StoryValue != 0)
+            {
+                <p>@item.StoryValue</p>
+            }
 
-@Html.ActionLink("Dodaj questa","Create","Quest")
+        </div>
+            
+    }
+
+</section>

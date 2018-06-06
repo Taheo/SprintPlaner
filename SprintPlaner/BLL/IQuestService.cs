@@ -10,8 +10,9 @@ namespace SprintPlaner.BLL
     interface IQuestService
     {
         IEnumerable<Quest> GetAll();
-        Quest GetSprintByID(Guid id);
+        Quest GetQuestByID(Guid id);
         void Create(Quest quest);
         void Delete(Guid id);
+        void Edit(Guid id, Quest quest);
     }
 }

@@ -186,7 +186,6 @@ E:\programowanie\ASPUczelnia\SprintPlaner\SprintPlaner\bin\EntityFramework.xml
 E:\programowanie\ASPUczelnia\SprintPlaner\SprintPlaner\bin\EntityFramework.SqlServer.xml
 E:\programowanie\ASPUczelnia\SprintPlaner\SprintPlaner\obj\Debug\SprintPlaner.Migrations.InitialCreate.resources
 E:\programowanie\ASPUczelnia\SprintPlaner\SprintPlaner\obj\Debug\SprintPlaner.csproj.GenerateResource.cache
-E:\programowanie\ASPUczelnia\SprintPlanerUltimate\SprintPlaner\SprintPlaner\obj\Debug\SprintPlaner.csprojResolveAssemblyReference.cache
 E:\programowanie\ASPUczelnia\SprintPlanerUltimate\SprintPlaner\SprintPlaner\obj\Debug\SprintPlaner.Migrations.InitialCreate.resources
 E:\programowanie\ASPUczelnia\SprintPlanerUltimate\SprintPlaner\SprintPlaner\obj\Debug\SprintPlaner.csproj.GenerateResource.cache
 E:\programowanie\ASPUczelnia\SprintPlanerUltimate\SprintPlaner\SprintPlaner\obj\Debug\SprintPlaner.csproj.CoreCompileInputs.cache
@@ -283,3 +282,4 @@ E:\programowanie\ASPUczelnia\SprintPlanerUltimate\SprintPlaner\SprintPlaner\bin\
 E:\programowanie\ASPUczelnia\SprintPlanerUltimate\SprintPlaner\SprintPlaner\bin\Microsoft.AI.WindowsServer.xml
 E:\programowanie\ASPUczelnia\SprintPlanerUltimate\SprintPlaner\SprintPlaner\bin\Microsoft.AI.Web.xml
 E:\programowanie\ASPUczelnia\SprintPlanerUltimate\SprintPlaner\SprintPlaner\obj\Debug\SprintPlaner.csproj.CopyComplete
+E:\programowanie\ASPUczelnia\SprintPlanerUltimate\SprintPlaner\SprintPlaner\obj\Debug\SprintPlaner.csprojResolveAssemblyReference.cache

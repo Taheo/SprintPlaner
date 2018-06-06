@@ -1,7 +1,24 @@
-﻿
+﻿@model  IEnumerable<SprintPlaner.Models.Quest>
 @{
     ViewBag.Title = "DeveloperView";
 }
 
 <h2>DeveloperView</h2>
 
+@foreach (var item in Model)
+{
+<div>
+    <p>@item.Title</p>
+    <p>@item.Description</p>
+    @if (item.StoryValue != 0)
+    {
+        <p>@item.StoryValue</p>
+    }
+    <p>
+        @item.Id
+    </p>
+    @Html.ActionLink("Dodaj wartość SP", "Edit", "Quest", new {id = item.Id}, null)
+
+</div>
+
+}

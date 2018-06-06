@@ -1,6 +1,7 @@
 ﻿using SprintPlaner.BLL;
 using SprintPlaner.DataBase;
 using SprintPlaner.Models;
+using SprintPlaner.VM;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -48,21 +49,47 @@ namespace SprintPlaner.Controllers
             }
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult CreateQuest(CreateQuestVM model)
+        {
+            if (ModelState.IsValid)
+            {
+                Quest quest = new Quest()
+                {
+                    Title = model.Title,
+                    Description = model.Description,
+                    StoryValue = model.StoryValue
+                };
+
+                service.Create(quest);
+            }
+
+            return RedirectToAction("Dashboard", "User");
+        }
+
         // GET: Quest/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Edit(Guid id)
         {
             return View();
         }
 
         // POST: Quest/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(Guid id, QuestToEditVM questtoedit)
         {
             try
             {
-                // TODO: Add update logic here
+                var QuestNew = new Quest
+                {
+                    Id = questtoedit.ID,
+                    Title = questtoedit.Title,
+                    Description = questtoedit.Description,
+                    StoryValue = questtoedit.StoryValue
+                };
+                service.Edit(id, QuestNew);
 
-                return RedirectToAction("Index");
+                return RedirectToAction("Dashboard", "User");
             }
             catch
             {

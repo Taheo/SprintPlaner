@@ -48,12 +48,18 @@ namespace SprintPlaner.Controllers
        
         public ActionResult Dashboard(User user)
         {
+            if (Session["user"] == null)
+            {
+                return RedirectToAction("Index", "Home");
+            }
             string eMail = Session["user"].ToString();
             User currentUser = db.ListOfUsers.Where(x => x.Email == eMail).FirstOrDefault();
             ViewBag.User = currentUser;
+
+                var model = db.ListOfQuests;
             if (currentUser.ProjectRole == Models.User.Role.Developer)
             {
-                return View("DeveloperView");
+                return View("DeveloperView", model);
             }
             if (currentUser.ProjectRole == Models.User.Role.ScrumMaster)
             {
@@ -61,7 +67,7 @@ namespace SprintPlaner.Controllers
             }
             if (currentUser.ProjectRole == Models.User.Role.ProductOwner)
             {
-                return View("ProductOwnerView");
+                return View("ProductOwnerView", model);
             }
 
             return View("OtherUserView");
