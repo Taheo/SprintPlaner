@@ -39,8 +39,8 @@ namespace SprintPlaner.Controllers
             try
             {
                 service.Create(newquest);
-                return View();
-                //return RedirectToAction("Dashboard", "User");
+                //return View();
+                return RedirectToAction("Dashboard", "User");
             }
             catch
             {
