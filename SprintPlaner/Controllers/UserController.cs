@@ -1,4 +1,5 @@
 ﻿using SprintPlaner.BLL;
+using SprintPlaner.DataBase;
 using SprintPlaner.Models;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,7 @@ namespace SprintPlaner.Controllers
     public class UserController : Controller
     {
         private IUserService service = new EFUserService();
+        private DataContext db = new DataContext();
 
         // GET: User
         public ActionResult Index()
@@ -18,9 +20,37 @@ namespace SprintPlaner.Controllers
             return View(service.GetAll());
         }
 
-        // GET: User/Details/5
-        public ActionResult Details(int id)
+        [HttpPost]
+        public ActionResult Login(User user)
         {
+            var userExists = db.ListOfUsers.SingleOrDefault(x => x.Email == user.Email);
+
+            if (userExists != null)
+            {
+                Session["loginSuccess"] = true;
+                Session["user"] = user.Email;
+                return RedirectToAction("Dashboard", "User");
+            }
+            else
+            {
+                return RedirectToAction("Index", "Home");
+            }
+        }
+
+        public ActionResult Logout()
+        {
+            Session["loginSuccess"] = null;
+            Session.Abandon();
+
+            return RedirectToAction("Index", "Home");
+        }
+
+       
+        public ActionResult Dashboard(User user)
+        {
+            string eMail = Session["user"].ToString();
+            User currentUser = db.ListOfUsers.Where(x => x.Email == eMail).FirstOrDefault();
+            ViewBag.User = currentUser;
             return View();
         }
 
