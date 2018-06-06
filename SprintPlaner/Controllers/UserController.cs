@@ -51,7 +51,11 @@ namespace SprintPlaner.Controllers
             string eMail = Session["user"].ToString();
             User currentUser = db.ListOfUsers.Where(x => x.Email == eMail).FirstOrDefault();
             ViewBag.User = currentUser;
-            return View();
+            if (currentUser.ProjectRole == Models.User.Role.Developer)
+            {
+                return View();
+            }
+            return View("OtherUserView");
         }
 
         // GET: User/Create

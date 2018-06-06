@@ -217,6 +217,7 @@
     <Content Include="Views\User\Index.cshtml" />
     <Content Include="Views\User\Create.cshtml" />
     <Content Include="Views\User\Dashboard.cshtml" />
+    <Content Include="Views\User\OtherUserView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Sprint\" />
