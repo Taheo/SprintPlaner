@@ -149,7 +149,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="BLL\EFSprintService.cs" />
-    <Compile Include="BLL\EFTaskService.cs" />
+    <Compile Include="BLL\EFQuestService.cs" />
     <Compile Include="BLL\EFUserService.cs" />
     <Compile Include="BLL\IQuestService.cs" />
     <Compile Include="BLL\IUserService.cs" />
@@ -157,6 +157,7 @@
     <Compile Include="BLL\MemorySprintService.cs" />
     <Compile Include="BLL\MemoryUserService.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\QuestController.cs" />
     <Compile Include="Controllers\SprintController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="DataBase\DataContext.cs" />
@@ -218,6 +219,10 @@
     <Content Include="Views\User\Create.cshtml" />
     <Content Include="Views\User\Dashboard.cshtml" />
     <Content Include="Views\User\OtherUserView.cshtml" />
+    <Content Include="Views\User\DeveloperView.cshtml" />
+    <Content Include="Views\User\ProductOwnerView.cshtml" />
+    <Content Include="Views\User\ScrumMasterView.cshtml" />
+    <Content Include="Views\Quest\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Sprint\" />

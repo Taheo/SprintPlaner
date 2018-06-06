@@ -53,8 +53,17 @@ namespace SprintPlaner.Controllers
             ViewBag.User = currentUser;
             if (currentUser.ProjectRole == Models.User.Role.Developer)
             {
-                return View();
+                return View("DeveloperView");
             }
+            if (currentUser.ProjectRole == Models.User.Role.ScrumMaster)
+            {
+                return View("ScrumMasterView");
+            }
+            if (currentUser.ProjectRole == Models.User.Role.ProductOwner)
+            {
+                return View("ProductOwnerView");
+            }
+
             return View("OtherUserView");
         }
 

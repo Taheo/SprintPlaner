@@ -8,7 +8,7 @@ using System.Web;
 
 namespace SprintPlaner.BLL
 {
-    public class EFTaskService : IQuestService
+    public class EFQuestService : IQuestService
     {
         public void Create(Quest quest)
         {
