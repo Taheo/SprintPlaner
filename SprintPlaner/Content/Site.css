@@ -1,6 +1,5 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿body * {
+    font-family: 'Roboto', sans-serif !important;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -25,4 +24,29 @@ textarea {
 
 section {
     height: 300px;
+}
+
+.btn {
+    background-color: #5C9EB6;
+    border-color: #5C9EB6;
+}
+
+    .btn:hover {
+        background-color: #4f90a8;
+        border-color: #f7ad4c;
+        color: #ffffff;
+    }
+
+.form-control:focus {
+    border-color: #f7ad4c;
+}
+
+.action-button {
+    box-sizing:border-box;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+    padding:0;
 }
