@@ -7,17 +7,16 @@
 
 @foreach (var item in @ViewBag.ListofQuests)
 {
-<div>
+<div class="quest-container">
     <p>@item.Title</p>
     <p>@item.Description</p>
+    <p>@item.Note</p>
     @if (item.StoryValue != 0)
     {
         <p>@item.StoryValue</p>
     }
-    <p>
-        @item.Id
-    </p>
-    @Html.ActionLink("Dodaj wartość SP", "Edit", "Quest", new {id = item.Id}, null)
+    @Html.ActionLink("Dodaj wartość SP", "Update", "Quest", new { id = item.Id }, null)
+    @*@Html.ActionLink("Dodaj wartość SP", "Update", "Quest")*@
 
 </div>
 

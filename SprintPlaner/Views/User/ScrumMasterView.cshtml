@@ -7,11 +7,12 @@
 
 @foreach (var item in @ViewBag.ListofQuests)
 {
-<div>
-    @if (item.StoryValue != 0)
+<div class="quest-container">
+    @if (item.StoryValue != 0 && item.StatusInSprint != true)
     {
         <p>@item.Title</p>
         <p>@item.Description</p>
+        <p>@item.Note</p>
         <p>@item.StoryValue</p>
         @Html.ActionLink("Wrzuć do sprintu", "AssignToSprint", "Quest", new { id = item.Id }, null)
     }

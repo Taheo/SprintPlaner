@@ -9,9 +9,10 @@
     @Html.ActionLink("Dodaj zadanie", "Create", "Quest")
     @foreach (var item in @ViewBag.ListofQuests)
     {
-        <div>
+        <div class="quest-container">
             <p>@item.Title</p>
             <p>@item.Description</p>
+            <p>@item.Note</p>
             @if (item.StoryValue != 0)
             {
                 <p>@item.StoryValue</p>

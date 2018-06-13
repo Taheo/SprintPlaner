@@ -85,9 +85,29 @@ namespace SprintPlaner.Controllers
                     Id = questtoedit.ID,
                     Title = questtoedit.Title,
                     Description = questtoedit.Description,
+                    Note = questtoedit.Note,
                     StoryValue = questtoedit.StoryValue
                 };
                 service.Edit(id, QuestNew);
+
+                return RedirectToAction("Dashboard", "User");
+            }
+            catch
+            {
+                return View();
+            }
+        }
+        public ActionResult Update(Guid id)
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Update(Guid id, QuestForDevVM questtoedit)
+        {
+            try
+            {
+               
+                service.Update(id, questtoedit);
 
                 return RedirectToAction("Dashboard", "User");
             }

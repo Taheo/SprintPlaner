@@ -41,6 +41,16 @@ namespace SprintPlaner.BLL
             }
         }
 
+        public void Update(Guid id, QuestForDevVM viewModel)
+        {
+            using (var context = new DataContext())
+            {
+                var entity = context.ListOfQuests.Find(id);
+                context.Entry(entity).CurrentValues.SetValues(viewModel);
+                context.SaveChanges();
+            }
+        }
+
         public IEnumerable<Quest> GetAll()
         {
             using (var db = new DataContext())

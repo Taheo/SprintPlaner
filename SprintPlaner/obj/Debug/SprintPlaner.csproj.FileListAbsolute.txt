@@ -284,3 +284,4 @@ E:\programowanie\ASPUczelnia\SprintPlanerUltimate\SprintPlaner\SprintPlaner\bin\
 E:\programowanie\ASPUczelnia\SprintPlanerUltimate\SprintPlaner\SprintPlaner\obj\Debug\SprintPlaner.csproj.CopyComplete
 E:\programowanie\ASPUczelnia\SprintPlanerUltimate\SprintPlaner\SprintPlaner\obj\Debug\SprintPlaner.csprojResolveAssemblyReference.cache
 E:\programowanie\ASPUczelnia\SprintPlanerUltimate\SprintPlaner\SprintPlaner\obj\Debug\SprintPlaner.Migrations.statusadded.resources
+E:\programowanie\ASPUczelnia\SprintPlanerUltimate\SprintPlaner\SprintPlaner\obj\Debug\SprintPlaner.Migrations.noteadded.resources

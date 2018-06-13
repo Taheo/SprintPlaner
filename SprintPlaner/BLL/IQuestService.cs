@@ -1,4 +1,5 @@
 ﻿using SprintPlaner.Models;
+using SprintPlaner.VM;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,7 @@ namespace SprintPlaner.BLL
         void Create(Quest quest);
         void Delete(Guid id);
         void Edit(Guid id, Quest quest);
+        void Update(Guid id, QuestForDevVM quest);
 
         //void Create(Guid sprintId, Quest newpQuest);
         //void Update(Guid sprintId, Guid questid, Quest updatedQuest);

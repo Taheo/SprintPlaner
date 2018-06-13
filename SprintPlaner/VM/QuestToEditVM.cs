@@ -16,6 +16,7 @@ namespace SprintPlaner.VM
         public string Title { get; set; }
         [Required]
         public string Description { get; set; }
+        public string Note { get; set; }
         public int StoryValue { get; set; }
     }
 }

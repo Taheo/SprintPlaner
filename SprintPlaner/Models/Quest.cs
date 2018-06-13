@@ -10,6 +10,7 @@ namespace SprintPlaner.Models
         public Guid Id { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
+        public string Note { get; set; }
         public int StoryValue { get; set; }
         public bool StatusInSprint { get; set; }
 

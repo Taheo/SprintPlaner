@@ -50,3 +50,7 @@ section {
     color: #fff;
     padding:0;
 }
+
+div.quest-container {
+    border: 1px solid #aaaaaa;
+}
