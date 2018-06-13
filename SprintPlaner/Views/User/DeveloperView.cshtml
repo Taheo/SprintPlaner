@@ -3,7 +3,7 @@
     ViewBag.Title = "DeveloperView";
 }
 
-<h2>DeveloperView</h2>
+<h2>Witaj @ViewBag.User.Name</h2>
 
 @foreach (var item in @ViewBag.ListofQuests)
 {
@@ -15,7 +15,7 @@
     {
         <p>@item.StoryValue</p>
     }
-    @Html.ActionLink("Dodaj wartość SP", "Update", "Quest", new { id = item.Id }, null)
+    @Html.ActionLink("Dodaj wartość SP", "Update", "Quest", new { id = item.Id }, new { @class = "btn btn-primary" })
     @*@Html.ActionLink("Dodaj wartość SP", "Update", "Quest")*@
 
 </div>

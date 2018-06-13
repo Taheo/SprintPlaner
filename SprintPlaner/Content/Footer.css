@@ -1,6 +1,5 @@
 ﻿footer {
     background: #EDEDED;
-    border-top: 1px #5C9EB6 solid;
     border-bottom: none;
     border-radius: 0;
 }
@@ -20,6 +19,7 @@
             color: #f7ad4c;
         }
 
-        footer ul li a:hover {
-            text-decoration: none;
-        }
+            footer ul li a:hover {
+                text-decoration: none;
+                color: #5C9EB6;
+            }

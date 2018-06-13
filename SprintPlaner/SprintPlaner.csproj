@@ -193,7 +193,6 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Footer.css" />
-    <Content Include="Content\Images\agilewall.jpg" />
     <Content Include="Content\Nav.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
