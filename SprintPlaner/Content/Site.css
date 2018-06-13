@@ -107,3 +107,7 @@ div.quest-container {
     div.quest-container p {
         color: #3276b1;
     }
+
+.pobutton {
+    margin-bottom:24px;
+}

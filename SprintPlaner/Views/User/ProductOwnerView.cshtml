@@ -3,10 +3,11 @@
     ViewBag.Title = "ProductOwnerView";
 }
 
-<h2>ProductOwnerView</h2>
+<h2>Witaj w widoku Właściciela Produktu @ViewBag.User.Name</h2>
+
 <section>
-    
-    @Html.ActionLink("Dodaj zadanie", "Create", "Quest")
+
+    @Html.ActionLink("Dodaj zadanie", "Create", "Quest", null, new { @class = "btn btn-primary pobutton" })
     @foreach (var item in @ViewBag.ListofQuests)
     {
         <div class="quest-container">
@@ -19,7 +20,7 @@
             }
 
         </div>
-            
+
     }
 
 </section>

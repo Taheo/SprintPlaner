@@ -3,35 +3,40 @@
     ViewBag.Title = "ScrumMasterView";
 }
 
-<h2>ScrumMasterView</h2>
-
-@foreach (var item in @ViewBag.ListofQuests)
-{
-<div class="quest-container">
-    @if (item.StoryValue != 0 && item.StatusInSprint != true)
+<h2>Witaj w widoku Scrum Mastera @ViewBag.User.Name</h2>
+<div class="quest-todo">
+    <h4>Zadania do zrobienia</h4>
+    @foreach (var item in @ViewBag.ListofQuests)
     {
-        <p>@item.Title</p>
-        <p>@item.Description</p>
-        <p>@item.Note</p>
-        <p>@item.StoryValue</p>
-        @Html.ActionLink("Wrzuć do sprintu", "AssignToSprint", "Quest", new { id = item.Id }, null)
-    }
+        <div class="quest-container">
+                <p>@item.Title</p>
+                <p>@item.Description</p>
+            @if (item.StoryValue != 0 && item.StatusInSprint != true)
+            {
+                <p>@item.Note</p>
+                <p>@item.StoryValue</p>
+                @Html.ActionLink("Wrzuć do sprintu", "AssignToSprint", "Quest", new { id = item.Id }, new { @class = "btn btn-primary" })
+            }
 
+        </div>
+
+    }
 </div>
 
-}
-<hr />
+<div class="sprint">
+    <h4>Zadanie w sprincie</h4>
+    @foreach (var item2 in @ViewBag.ListofQuests)
+    {
+            if (item2.StatusInSprint == true)
+            {
+            <div class="quest-container">
+                <p>@item2.Title</p>
+                <p>@item2.Description</p>
+                <p>@item2.Note</p>
+                <p>@item2.StoryValue</p>
+                @Html.ActionLink("Usuń ze sprintu", "RemoveFromSprint", "Quest", new { id = item2.Id }, new { @class = "btn btn-primary" })
+            </div>
+            }
 
-@foreach (var item in @ViewBag.ListofQuests)
-{
-    <div>
-        @if (item.StatusInSprint == true)
-        {
-            <p>@item.Title</p>
-            <p>@item.Description</p>
-            <p>@item.StoryValue</p>
-        }
-
-    </div>
-
-}
+    }
+</div>
