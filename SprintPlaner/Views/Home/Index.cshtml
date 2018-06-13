@@ -2,12 +2,20 @@
     ViewBag.Title = "Home Page";
 }
 
-<section>
+<section class="slider">
     <h1>
-        Sprint Planer Homepage
+        Sprint Planer
+        <span>Zaplanujmy sprint</span>
     </h1>
-    @Html.ActionLink("Zobacz użytkowinków", "Index", "User", null, new { @class = "btn action-button" })
-    @Html.ActionLink("Stwórz użytkownika", "Create", "User", null, new { @class = "btn action-button" })
-
-
+</section>
+<section class="main">
+    <div class="actions-container col-md-12 col-sm-12">
+        <h2>
+            Wypróbuj możliwości
+        </h2>
+        <div class="action-buttons">
+            @Html.ActionLink("Zobacz użytkowników", "Index", "User", null, new { @class = "btn action-button" })
+            @Html.ActionLink("Stwórz użytkownika", "Create", "User", null, new { @class = "btn action-button" })
+        </div>
+    </div>
 </section>

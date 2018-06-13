@@ -1,6 +1,25 @@
 ﻿footer {
-    background: #FFFFFF;
+    background: #EDEDED;
     border-top: 1px #5C9EB6 solid;
     border-bottom: none;
     border-radius: 0;
 }
+
+    footer ul {
+        margin: 12px 0;
+        padding: 12px 0;
+        list-style: none;
+        font-size: 24px;
+        text-align: center;
+        height: 100%;
+        box-sizing: border-box; 
+        color: #f7ad4c;
+    }
+        footer ul li a {
+            text-decoration: none;
+            color: #f7ad4c;
+        }
+
+        footer ul li a:hover {
+            text-decoration: none;
+        }

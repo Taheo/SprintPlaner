@@ -1,4 +1,7 @@
-﻿body * {
+﻿body {
+    background: #EDEDED;
+}
+body * {
     font-family: 'Roboto', sans-serif !important;
 }
 
@@ -24,7 +27,9 @@ textarea {
 
 section {
     height: 100%;
+    margin-bottom: 24px;
 }
+
 
 .btn {
     background-color: #5C9EB6;
@@ -50,6 +55,48 @@ section {
     color: #fff;
     padding:0;
 }
+
+h1, h2, h3, h4 {
+    cursor: default;
+}
+
+
+/**HP*/
+
+section.slider {
+    border-bottom: 1px solid #f7ad4c;
+}
+h1 {
+    font-size: 42px;
+    text-align: center;
+    margin-bottom: 24px;
+    color: #f7ad4c;
+}
+
+    h1 span {
+        font-size: 20px;
+        display: block;
+    }
+
+.actions-container {
+    
+    text-align: center;
+    
+}
+    .actions-container h2 {
+        color: #f7ad4c;
+    }
+
+    .actions-container .action-buttons {
+        text-align: center;
+    }
+    .actions-container .action-buttons a {
+        display: block;
+        margin: 0 auto 16px;
+    }
+
+
+/*HP ends*/
 
 div.quest-container {
     border: 1px solid #aaaaaa;
