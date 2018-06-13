@@ -14,5 +14,11 @@ namespace SprintPlaner.BLL
         void Create(Quest quest);
         void Delete(Guid id);
         void Edit(Guid id, Quest quest);
+
+        //void Create(Guid sprintId, Quest newpQuest);
+        //void Update(Guid sprintId, Guid questid, Quest updatedQuest);
+        //void Delete(Guid sprintId, Guid QuestId);
+        //Quest Get(Guid questId);
+        //IEnumerable<Quest> GetAllBySprint(Guid sprintId);
     }
 }

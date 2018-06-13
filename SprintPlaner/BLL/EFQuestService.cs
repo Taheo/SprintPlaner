@@ -55,6 +55,7 @@ namespace SprintPlaner.BLL
             {
                 return db.ListOfQuests.SingleOrDefault(x => x.Id == id);
             }
+           
         }
     }
 }

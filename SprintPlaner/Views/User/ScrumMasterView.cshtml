@@ -5,3 +5,16 @@
 
 <h2>ScrumMasterView</h2>
 
+@foreach (var item in @ViewBag.ListofQuests)
+{
+    <div>
+        @if (item.StoryValue != 0)
+        {
+        <p>@item.Title</p>
+        <p>@item.Description</p>
+        <p>@item.StoryValue</p>
+        }
+       
+    </div>
+
+}

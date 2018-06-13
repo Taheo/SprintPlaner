@@ -56,10 +56,11 @@ namespace SprintPlaner.Controllers
             User currentUser = db.ListOfUsers.Where(x => x.Email == eMail).FirstOrDefault();
             ViewBag.User = currentUser;
 
-                var model = db.ListOfQuests;
+
+            ViewBag.ListofQuests = db.ListOfQuests;
             if (currentUser.ProjectRole == Models.User.Role.Developer)
             {
-                return View("DeveloperView", model);
+                return View("DeveloperView");
             }
             if (currentUser.ProjectRole == Models.User.Role.ScrumMaster)
             {
@@ -67,7 +68,7 @@ namespace SprintPlaner.Controllers
             }
             if (currentUser.ProjectRole == Models.User.Role.ProductOwner)
             {
-                return View("ProductOwnerView", model);
+                return View("ProductOwnerView");
             }
 
             return View("OtherUserView");

@@ -1,11 +1,11 @@
-﻿@model  IEnumerable<SprintPlaner.Models.Quest>
+﻿
 @{
     ViewBag.Title = "DeveloperView";
 }
 
 <h2>DeveloperView</h2>
 
-@foreach (var item in Model)
+@foreach (var item in @ViewBag.ListofQuests)
 {
 <div>
     <p>@item.Title</p>
