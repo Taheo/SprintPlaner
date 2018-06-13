@@ -168,6 +168,10 @@
     <Compile Include="Migrations\201806031718145_InitialCreate.Designer.cs">
       <DependentUpon>201806031718145_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806131000045_statusadded.cs" />
+    <Compile Include="Migrations\201806131000045_statusadded.Designer.cs">
+      <DependentUpon>201806131000045_statusadded.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Sprint.cs" />
     <Compile Include="Models\Quest.cs" />
@@ -250,6 +254,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201806031718145_InitialCreate.resx">
       <DependentUpon>201806031718145_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806131000045_statusadded.resx">
+      <DependentUpon>201806131000045_statusadded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

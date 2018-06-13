@@ -11,9 +11,11 @@ namespace SprintPlaner.Models
         public string Title { get; set; }
         public string Description { get; set; }
         public int StoryValue { get; set; }
+        public bool StatusInSprint { get; set; }
 
         public Quest()
         {
+            StatusInSprint = false;
             Id = Guid.NewGuid();
         }
     }

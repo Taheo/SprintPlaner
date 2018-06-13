@@ -97,6 +97,22 @@ namespace SprintPlaner.Controllers
             }
         }
 
+        public ActionResult AssignToSprint(Guid id)
+        {
+            var questToChange = db.ListOfQuests.Where(x => x.Id == id).FirstOrDefault();
+            try
+            {
+                questToChange.StatusInSprint = true;
+                db.SaveChanges();
+                return RedirectToAction("Dashboard", "User");
+            }
+            catch 
+            {
+
+                return RedirectToAction("Dashboard","User");
+            }
+        }
+
         // GET: Quest/Delete/5
         public ActionResult Delete(int id)
         {
