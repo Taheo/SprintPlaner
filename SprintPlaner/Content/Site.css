@@ -111,3 +111,28 @@ div.quest-container {
 .pobutton {
     margin-bottom:24px;
 }
+
+@media(max-width: 768px) {
+
+    button.navbar-toggle,
+    .navbar-inverse .navbar-toggle:hover, 
+    .navbar-inverse .navbar-toggle:focus {
+        background-color: #f7ad4c;
+    }
+
+    h1, h2, h3, h4 {
+        text-align: center;
+    }
+
+    div.quest-container {
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 8px;
+    }
+
+    .pobutton {
+        display:block;
+        width:50%;
+        margin: 0 auto 16px;
+    }
+}

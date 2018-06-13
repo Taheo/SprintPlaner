@@ -1,7 +1,7 @@
 ﻿.navbar-inverse {
     background: #EDEDED;
+    border: none;
     border-bottom: 1px #5C9EB6 solid;
-    border-top: none;
     border-radius: 0;
 }
 
